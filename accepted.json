@@ -1,0 +1,5 @@
+{
+  "reaches_self": "by\n  exact ⟨0, iterate_zero f one⟩",
+  "iterate_commute": "by\n  induction n with\n  | zero => simp [iterate_zero]\n  | succ n ih =>\n      rw [iterate_succ, iterate_succ, ih]",
+  "reaches_predecessor": "by\n  rcases hx with ⟨k, hk⟩\n  refine ⟨k + 1, ?_⟩\n  calc\n    iterate f (k + 1) x = f (iterate f k x) := iterate_succ f k x\n    _ = iterate f k (f x) := (iterate_commute f k x).symm\n    _ = one := hk"
+}

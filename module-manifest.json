@@ -1,0 +1,17 @@
+{
+  "path": "boundary_candidate.lean",
+  "sha256": "df957ec290445a17fc5ebde2c3449f67f9d34ec22aae467b6ea262e2850df1b9",
+  "endpoints": [
+    "JevBoundary.lost_parent_mem_cover",
+    "JevBoundary.repaired_parent_coverage",
+    "JevBoundary.repaired_roots_mem_cover",
+    "JevBoundary.repaired_path_is_original"
+  ],
+  "frozen_signatures": {
+    "lost_parent_mem_cover": "{α : Type} (removed : List α) (edge : α → α → Prop) (children : α → List α) (hchildren : ∀ u v, edge u v → v ∈ children u) (v : α) (h : LostParent removed edge v) : v ∈ removed.flatMap children",
+    "repaired_parent_coverage": "{α β : Type} (removed : List α) (edge : α → α → Prop) (label : α → β) (hcoverage : ∀ v, (∃ u, edge u v) → ∀ c, ∃ u, edge u v ∧ label u = c) (v : α) (h : ∃ u, Repaired removed edge u v) : ∀ c, ∃ u, Repaired removed edge u v ∧ label u = c",
+    "repaired_roots_mem_cover": "{α : Type} (removed roots : List α) (edge : α → α → Prop) (children : α → List α) (hchildren : ∀ u v, edge u v → v ∈ children u) (hroots : ∀ v, (¬ ∃ u, edge u v) → v ∈ roots) (v : α) (hkeep : v ∉ removed) (hnewroot : ¬ ∃ u, Repaired removed edge u v) : v ∈ roots ++ removed.flatMap children",
+    "repaired_path_is_original": "{α : Type} (removed : List α) (edge : α → α → Prop) (path : Nat → α) (h : ∀ n, Repaired removed edge (path n) (path (n+1))) : ∀ n, edge (path n) (path (n+1))"
+  },
+  "scope": "Finite covers, parent-label coverage and path inclusion for an edge-deletion repair. No full population eligibility, optimality, connectivity or IAP theorem."
+}

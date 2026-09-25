@@ -1,0 +1,7 @@
+# Install torch separately from https://download.pytorch.org/whl/cu124
+torch==2.6.0
+transformers==4.57.3
+huggingface_hub==0.36.2
+safetensors==0.8.0
+numpy==2.5.3
+einops==0.8.2

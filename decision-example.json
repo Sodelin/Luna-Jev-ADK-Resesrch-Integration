@@ -1,0 +1,17 @@
+[
+  {
+    "id": "boundary-task",
+    "state": "Prove that a vertex with a parent in the removed list belongs to the flatMap of that list's child lists.",
+    "questions": {
+      "strategy": {
+        "type": "choice",
+        "instructions": "Choose the first proof strategy. This is a suggestion; Lean checks correctness.",
+        "criteria": {
+          "direct": "Unfold a definition or rewrite an equality.",
+          "induction": "Use induction on a natural number or list.",
+          "membership": "Use list membership lemmas for flatMap or append."
+        }
+      }
+    }
+  }
+]

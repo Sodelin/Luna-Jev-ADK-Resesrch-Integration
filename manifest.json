@@ -1,0 +1,19 @@
+{
+  "canonical_path": "<canonical-research-clone>\\lean\\NewMathDiscovery\\RankedCoalescenceSound.lean",
+  "snapshot": "snapshots/RankedCoalescenceSound.lean",
+  "sha256": "2f6b8b6dc0ba491a17ed1c4b31a8c8ecf56d3f9ede3e91de595379a007e97eaf",
+  "theorems": {
+    "reaches_self": "{α : Type} (f : α → α) (one : α) : Reaches f one one",
+    "iterate_commute": "{α : Type} (f : α → α) (n : Nat) (x : α) : iterate f n (f x) = f (iterate f n x)",
+    "reaches_predecessor": "{α : Type} (f : α → α) (one x : α) (hx : Reaches f one (f x)) : Reaches f one x"
+  },
+  "statement_sha256": "1d59fdd0c53f922808408920ce668fc0b79d92d677e3ae2417e227e7e7829d85",
+  "dependencies": {
+    "reaches_self": [],
+    "iterate_commute": [],
+    "reaches_predecessor": [
+      "iterate_commute"
+    ]
+  },
+  "created_utc": "2026-09-25T15:55:12.327537+00:00"
+}

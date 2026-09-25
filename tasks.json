@@ -1,0 +1,7 @@
+{
+  "tasks": [
+    {"name": "reaches_self", "statement": "{α : Type} (f : α → α) (one : α) : Reaches f one one", "depends_on": []},
+    {"name": "iterate_commute", "statement": "{α : Type} (f : α → α) (n : Nat) (x : α) : iterate f n (f x) = f (iterate f n x)", "depends_on": []},
+    {"name": "reaches_predecessor", "statement": "{α : Type} (f : α → α) (one x : α) (hx : Reaches f one (f x)) : Reaches f one x", "depends_on": ["iterate_commute"]}
+  ]
+}

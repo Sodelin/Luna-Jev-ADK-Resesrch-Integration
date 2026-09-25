@@ -1,0 +1,6 @@
+{
+  "type": "object",
+  "properties": {"proof": {"type": "string"}},
+  "required": ["proof"],
+  "additionalProperties": false
+}
