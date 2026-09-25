@@ -25,7 +25,7 @@ Use Python 3.12. From the repository root:
 python -m unittest -v test_luna_loop test_corollary_queue
 ```
 
-These controls use temporary directories and mock provider/compiler calls. They do not establish a new mathematical result. At publication, the public staging copy passed 29 such controls.
+These controls use temporary directories and mock provider/compiler calls. They do not establish a new mathematical result. The corrected queue version and original loop passed 33 such controls in the public staging copy. An independent offline review reproduced and closed an ownership-expiry edge case for the reviewed queue version.
 
 The original proof pilot uses Lean 4.33.1. Configure `PILOT_LEAN_EXE` and `PILOT_CANON_SOURCE` for a destination before any independent execution. The queue currently accepts only small standalone Lean/Std packets with at most 5,000 characters of combined source context; Mathlib project builds and cross-job dependencies are outside this adapter. See `COROLLARY-QUEUE.md` for the packet contract.
 
